@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teachers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,600;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/teachers.css" />
+    <link rel="stylesheet" href="../css/toggle.css" />
+  </head>
+  <body>
+    <div class="body-container">
+      <header class="header">
+        <div class="content-box">
+          <div class="header-content">
+            <h3>
+              <a href="../index.html"
+                ><img src="../assets/logo-redrover.svg" alt="Logo"
+              /></a>
+            </h3>
+            <nav class="navigation">
+              <ul class="nav-menu-list">
+                <li class="nav-menu-item">
+                  <a
+                    href="../index.html#courses"
+                    onclick="scrollToSection('#courses')"
+                    >Courses</a
+                  >
+                </li>
+                <li class="nav-menu-item">
+                  <a href="../index.html#learn" onclick="scrollToSection('#learn')"
+                    >Training</a
+                  >
+                </li>
+                <li class="nav-menu-item">
+                  <a href="../index.html#about" onclick="scrollToSection('#about')"
+                    >About school</a
+                  >
+                </li>
+                <li class="nav-menu-item">
+                  <a href="../index.html#teachers">Teachers</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="switch">
+              <input
+                id="language-toggle"
+                class="check-toggle check-toggle-round-flat"
+                type="checkbox"
+              />
+              <label for="language-toggle"></label>
+              <span class="on">EN</span>
+              <span class="off">RU</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="teachers">
+          <div class="content-box">
+            <div class="teachers-wrapper">
+               <div class="breadcrumbs">
+                <span><a href="../index.html">Home</a></span>
+                <span> /</span>
+                <span>Teachers</span>
+              </div>
+              <h2 class="teachers-title">Teachers</h2>             
+              <div class="teachers-container">
+                <div class="teachers-item">
+                  <div class="teachers-image-box">
+                    <img class="teachers-image" src="../assets/Sergey.png" />
+                    <div class="teachers-image-footer"></div>
+                  </div>
+                  <div class="teachers-description-box">
+                    <div class="teachers-hr"></div>
+                    <div class="teachers-description">
+                      <h3 class="teachers-name">Sergey Demyanenko</h3>
+                      <p class="teachers-position">Software engineer</p>
+                      <p class="teachers-description-text">
+                        I have been a teacher since 2006. I focus on programming
+                        in my lessons because every programmer can be a tester,
+                        but not every
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="teachers-item">
+                  <div class="teachers-image-box">
+                    <img
+                      class="teachers-image"
+                      src="../assets/13_Baha_Mametyarov.jpg"
+                    />
+                    <div class="teachers-image-footer"></div>
+                  </div>
+                  <div class="teachers-description-box">
+                    <div class="teachers-hr"></div>
+                    <div class="teachers-description">
+                      <h3 class="teachers-name">Baha Mametyarov</h3>
+                      <p class="teachers-position">Senior Consultant at CGI</p>
+                      <p class="teachers-description-text">
+                        I have over 18 years of experience in Tech. I’ve been
+                        teaching at the RedRover school since March 2022.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="teachers-item">
+                  <div class="teachers-image-box">
+                    <img
+                      class="teachers-image"
+                      src="../assets/6_Maria_Moroz.jpg"
+                    />
+                    <div class="teachers-image-footer"></div>
+                  </div>
+                  <div class="teachers-description-box">
+                    <div class="teachers-hr"></div>
+                    <div class="teachers-description">
+                      <h3 class="teachers-name">Maria Moroz</h3>
+                      <p class="teachers-position">QA Automation Engineer</p>
+                      <p class="teachers-description-text">
+                        I am a tech lead on Cypress projects and I also serve as
+                        an administrative coordinator at the RedRover school.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="teachers-item">
+                  <div class="teachers-image-box">
+                    <img
+                      class="teachers-image"
+                      src="../assets/19_Dmitry_Ermolaev.jpg"
+                    />
+                    <div class="teachers-image-footer"></div>
+                  </div>
+                  <div class="teachers-description-box">
+                    <div class="teachers-hr"></div>
+                    <div class="teachers-description">
+                      <h3 class="teachers-name">Dmitry Ermolaev</h3>
+                      <p class="teachers-position">Senior Consultant, Java</p>
+                      <p class="teachers-description-text">
+                       I have 30 years of experience In Software development and Integration. I’ve been teaching at the RedRover school since September 2021.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="teachers-item">
+                  <div class="teachers-image-box">
+                    <!-- <img
+                      class="teachers-image"
+                      src=""
+                    /> -->
+                    <div class="temp-image"></div>
+                    <div class="teachers-image-footer"></div>
+                  </div>
+                  <div class="teachers-description-box">
+                    <div class="teachers-hr"></div>
+                    <div class="teachers-description">
+                      <h3 class="teachers-name">Nalya Shakirova</h3>
+                      <p class="teachers-position">QA Test Automation Engineer Teaching JavaScript, Cypress</p>
+                      <p class="teachers-description-text">
+                        I am QA enthusiast and bugs investigator, I really enjoy coding and mentoring.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="teachers-item">
+                  <div class="teachers-image-box">
+                    <img
+                      class="teachers-image"
+                      src="../assets/10_Baur_Urazalinov.jpg"
+                    />
+                    <div class="teachers-image-footer"></div>
+                  </div>
+                  <div class="teachers-description-box">
+                    <div class="teachers-hr"></div>
+                    <div class="teachers-description">
+                      <h3 class="teachers-name">Baur Urazalinov</h3>
+                      <p class="teachers-position">Software Engineer</p>
+                      <p class="teachers-description-text">
+                        Knowledge of various programming languages, methodologies, and tools. I have a passion for software development, and software quality and I love to try new technologies.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="teachers-item">
+                  <div class="teachers-image-box">
+                    <img
+                      class="teachers-image"
+                      src="../assets/8_Aigul_Mustafina.jpg"
+                    />
+                    <div class="teachers-image-footer"></div>
+                  </div>
+                  <div class="teachers-description-box">
+                    <div class="teachers-hr"></div>
+                    <div class="teachers-description">
+                      <h3 class="teachers-name">Aigul Mustafina</h3>
+                      <p class="teachers-position">Teaching Python theory</p>
+                      <p class="teachers-description-text">
+                        There are no "hopeless" humanitarians or techies. There is only the desire for new knowledge and perseverance.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="teachers-item">
+                  <div class="teachers-image-box">
+                    <img
+                      class="teachers-image"
+                      src="../assets/16_Edward_Isakov.jpg"
+                    />
+                    <div class="teachers-image-footer"></div>
+                  </div>
+                  <div class="teachers-description-box">
+                    <div class="teachers-hr"></div>
+                    <div class="teachers-description">
+                      <h3 class="teachers-name">Edward Isakov</h3>
+                      <p class="teachers-position">Senior Software QA Engineer</p>
+                      <p class="teachers-description-text">
+                        I’ve been working in QA for 6 years. I’m trying to be on the wave and don’t stop learning new technology, I also share my experience with others to help people integrate into QA faster.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="teachers-item">
+                  <div class="teachers-image-box">
+                    <img
+                      class="teachers-image"
+                      src="../assets/2_Mikhail_Mir.jpg"
+                    />
+                    <div class="teachers-image-footer"></div>
+                  </div>
+                  <div class="teachers-description-box">
+                    <div class="teachers-hr"></div>
+                    <div class="teachers-description">
+                      <h3 class="teachers-name">Mikhail Mir</h3>
+                      <p class="teachers-position">SDET</p>
+                      <p class="teachers-description-text">
+                        I live in Arizona. Finished RedRover School myself, and now I’m working as a SDET on Java and Python projects (UI and API testing). I love traveling, hiking, and meeting new people.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="teachers-item">
+                  <div class="teachers-image-box">
+                    <img
+                      class="teachers-image"
+                      src="../assets/12_Tatiana_Volk.jpg"
+                    />
+                    <div class="teachers-image-footer"></div>
+                  </div>
+                  <div class="teachers-description-box">
+                    <div class="teachers-hr"></div>
+                    <div class="teachers-description">
+                      <h3 class="teachers-name">Tatiana Volk</h3>
+                      <p class="teachers-position">QA Engineer Teaching Java Script</p>
+                      <p class="teachers-description-text">
+                        RedRover school helped me to find my job. Now I am glad to help new students make their dreams come true!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="teachers-item">
+                  <div class="teachers-image-box">
+                    <img
+                      class="teachers-image"
+                      src="../assets/15_Adelina_Kovina.jpg"
+                    />
+                    <div class="teachers-image-footer"></div>
+                  </div>
+                  <div class="teachers-description-box">
+                    <div class="teachers-hr"></div>
+                    <div class="teachers-description">
+                      <h3 class="teachers-name">Adelina Kovina</h3>
+                      <p class="teachers-position">Teaching English speaking, supervising Java practice</p>
+                      <p class="teachers-description-text">
+                        I’m passionate about technologies of all kinds, helping society move toward a better world for everyone. I’m very into social dramas, science fiction, music and obsessed with the American accent.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="teachers-item">
+                  <div class="teachers-image-box">
+                    <img
+                      class="teachers-image"
+                      src="../assets/7_Marina_Mikhailovsk.jpg"
+                    />
+                    <div class="teachers-image-footer"></div>
+                  </div>
+                  <div class="teachers-description-box">
+                    <div class="teachers-hr"></div>
+                    <div class="teachers-description">
+                      <h3 class="teachers-name">Marina Mikhailovskaya</h3>
+                      <p class="teachers-position">QA Engineer Teaching Interview preparation for QA</p>
+                      <p class="teachers-description-text">
+                        I am a practicing QA Engineer, I love my profession and am happy to share my knowledge with students.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="teachers-item">
+                  <div class="teachers-image-box">
+                    <img
+                      class="teachers-image"
+                      src="../assets/9_Viktoriia_Karpus.jpg"
+                    />
+                    <div class="teachers-image-footer"></div>
+                  </div>
+                  <div class="teachers-description-box">
+                    <div class="teachers-hr"></div>
+                    <div class="teachers-description">
+                      <h3 class="teachers-name">Viktoriia Karpus</h3>
+                      <p class="teachers-position">English teacher</p>
+                      <p class="teachers-description-text">
+                        Teaching is my passion, and I’ve been doing it since 2011. I love how teachers and students learn from each other, to be in the class of students who’s eager to learn. It brings me joy to share knowledge useful for real life!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="teachers-item">
+                  <div class="teachers-image-box">
+                    <img
+                      class="teachers-image"
+                      src="../assets/11_Artuom_Kudryashov.jpg"
+                    />
+                    <div class="teachers-image-footer"></div>
+                  </div>
+                  <div class="teachers-description-box">
+                    <div class="teachers-hr"></div>
+                    <div class="teachers-description">
+                      <h3 class="teachers-name">Artuom Kudryashov</h3>
+                      <p class="teachers-position">English teacher</p>
+                      <p class="teachers-description-text">
+                        Living in Brooklyn, New York. Hobbies are biking and teaching English. It’s a great pleasure for me to see that we are getting better today than we were yesterday.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="teachers-item">
+                  <div class="teachers-image-box">
+                    <img
+                      class="teachers-image"
+                      src="../assets/14_Tatyana_Ganeli.png"
+                    />
+                    <div class="teachers-image-footer"></div>
+                  </div>
+                  <div class="teachers-description-box">
+                    <div class="teachers-hr"></div>
+                    <div class="teachers-description">
+                      <h3 class="teachers-name">Tatyana Ganeli</h3>
+                      <p class="teachers-position">Communications and Marketing Professional</p>
+                      <p class="teachers-description-text">
+                       Nothing is going to take you further in life than your ability to connect with people!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="teachers-item">
+                  <div class="teachers-image-box">
+                    <img
+                      class="teachers-image"
+                      src="../assets/3_Tatiana_Kerzhner.jpg"
+                    />
+                    <div class="teachers-image-footer"></div>
+                  </div>
+                  <div class="teachers-description-box">
+                    <div class="teachers-hr"></div>
+                    <div class="teachers-description">
+                      <h3 class="teachers-name">Tatiana Kerzhner</h3>
+                      <p class="teachers-position">Data Analyst</p>
+                      <p class="teachers-description-text">
+                        I graduated from San Francisco State University and worked for many years as a Data Analyst in the US financial corporations. Now I’m involved in investments, family business, and a few projects for Russian speaking community.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="teachers-item">
+                  <div class="teachers-image-box">
+                    <img
+                      class="teachers-image"
+                      src="../assets/17_Tanya_Zaryankina.jpg"
+                    />
+                    <div class="teachers-image-footer"></div>
+                  </div>
+                  <div class="teachers-description-box">
+                    <div class="teachers-hr"></div>
+                    <div class="teachers-description">
+                      <h3 class="teachers-name">Tanya Zaryankina</h3>
+                      <p class="teachers-position">RedRover Marketing Manager</p>
+                      <p class="teachers-description-text">
+                        I used to work in marketing, but now I’m a QA Automation Engineer. In addition, I use my marketing experience to enhance and promote the school on social media.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="teachers-item">
+                  <div class="teachers-image-box">
+                    <img
+                      class="teachers-image"
+                      src="../assets/18_Daria_Sandler.jpg"
+                    />
+                    <div class="teachers-image-footer"></div>
+                  </div>
+                  <div class="teachers-description-box">
+                    <div class="teachers-hr"></div>
+                    <div class="teachers-description">
+                      <h3 class="teachers-name">Daria Sandler</h3>
+                      <p class="teachers-position">QA Analyst at Dotdash-Meredith</p>
+                      <p class="teachers-description-text">
+                        Main scoop of work at school are: organizing work of small groups, work with team leaders and leading practice on real projects.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="teachers-item">
+                  <div class="teachers-image-box">
+                    <img
+                      class="teachers-image"
+                      src="../assets/4_Timur_Malik.jpg"
+                    />
+                    <div class="teachers-image-footer"></div>
+                  </div>
+                  <div class="teachers-description-box">
+                    <div class="teachers-hr"></div>
+                    <div class="teachers-description">
+                      <h3 class="teachers-name">Timur Malik</h3>
+                      <p class="teachers-position">Java / Back-end developer Co-teaching Java course</p>
+                      <p class="teachers-description-text">
+                        I’m an open-minded person and always ready to help, I like sharing knowledge and experience. My motto is "Never give up".
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="space2"></div>
+      </main>
+
+      <footer class="footer">
+        <div class="content-box">
+          <div class="footer-container">
+            <div class="footer-media-box">
+              <h3>
+                <a href="../index.html"
+                  ><img src="../assets/logo-redrover.svg" alt="Logo"
+                /></a>
+              </h3>
+              <ul class="footer-media-list">
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.facebook.com/groups/redrovercommunity/?ref=share&mibextid=NSMWBT"
+                    ><img src="../assets/facebook.svg" alt="facebook"
+                  /></a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://t.me/redroverschool"
+                    ><img src="../assets/telegramm.svg" alt="telegramm"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://instagram.com/redrover.school?igshid=YmMyMTA2M2Y="
+                    ><img
+                      src="../assets/fa-brands_instagram.svg"
+                      alt="instagram"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/company/redrover-school"
+                    ><img
+                      src="../assets/linkedin_logo_icon_1.svg"
+                      alt="linkedin"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p class="footer-email">redrover@gmail.com</p>
+            </div>
+          </div>
+          <div>
+            <p class="footer-copyright">
+              Copyright © 2022 RedRover School. All rights reserved
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../main.js"></script>
+  </body>
+</html>
