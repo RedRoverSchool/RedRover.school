@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 -Not Found</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,600;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/404.css">
+     <link rel="stylesheet" href="./css/toggle.css">
+  </head>
+  <body>
+    <div class="body-container">
+      <header class="header">
+        <div class="content-box">
+          <div class="header-content">
+            <h3>
+              <a href="./index.html"
+                ><img src="./assets/logo-redrover.svg" alt="Logo"
+              /></a>
+            </h3>
+            <nav class="navigation">
+              <ul class="nav-menu-list">
+                <li class="nav-menu-item">
+                  <a href="./index.html#courses" onclick="scrollToSection('#courses')"
+                    >Courses</a
+                  >
+                </li>
+                <li class="nav-menu-item">
+                  <a href="./index.html#learn" onclick="scrollToSection('#learn')"
+                    >Training</a
+                  >
+                </li>
+                <li class="nav-menu-item">
+                  <a href="./index.html#about" onclick="scrollToSection('#about')"
+                    >About school</a
+                  >
+                </li>
+                <li class="nav-menu-item">
+                  <a href="./index.html#teachers">Teachers</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="switch">
+              <input
+                id="language-toggle"
+                class="check-toggle check-toggle-round-flat"
+                type="checkbox"
+              />
+              <label for="language-toggle"></label>
+              <span class="on">EN</span>
+              <span class="off">RU</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+       <div class="space"></div>
+       <div class="not-found">
+         <div class="content-box">
+          <div class="not-found-container">
+            <div>
+              <h2 class="not-found-title">ERROR OCCURRED</h2>
+              <p class="not-found-description">The page on this link does not exist.</p>
+              <button class="redirect-button"><a href="./index.html">GO BACK TO THE HOME</a></button>
+            </div>
+            <div>
+              <img src="./assets/404ERROR.svg" alt="404 error">
+            </div>
+          </div>
+        </div>
+       </div>
+       <div class="space2"></div>
+      </main>
+
+      <footer class="footer">
+        <div class="content-box">
+          <div class="footer-container">
+            <div class="footer-media-box">
+              <h3>
+                <a href="./index.html"
+                  ><img src="./assets/logo-redrover.svg" alt="Logo"
+                /></a>
+              </h3>
+              <ul class="footer-media-list">
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.facebook.com/groups/redrovercommunity/?ref=share&mibextid=NSMWBT"
+                    ><img src="./assets/facebook.svg" alt="facebook"
+                  /></a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://t.me/redroverschool"
+                    ><img src="./assets/telegramm.svg" alt="telegramm"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://instagram.com/redrover.school?igshid=YmMyMTA2M2Y="
+                    ><img
+                      src="./assets/fa-brands_instagram.svg"
+                      alt="instagram"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/company/redrover-school"
+                    ><img
+                      src="./assets/linkedin_logo_icon_1.svg"
+                      alt="linkedin"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p class="footer-email">redrover@gmail.com</p>
+            </div>
+          </div>
+          <div>
+            <p class="footer-copyright">
+              Copyright © 2022 RedRover School. All rights reserved
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
