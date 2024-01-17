@@ -1,523 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RedRover.School</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,600;0,900;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/toggle.css">
-  </head>
-  <body>
-    <div class="body-container">
-      <header class="header">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RedRover.School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,600;0,900;1,400&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/toggle.css">
+  <link rel="stylesheet" href="./css/mobile.css">
+</head>
+
+<body>
+  <div class="body-container">
+    <header class="header">
+      <div class="content-box">
+        <div class="header-content">
+          <h3>
+            <a href="./index.html"><img src="./assets/logo-redrover.svg" alt="Logo"></a>
+          </h3>
+
+          <nav class="navigation">
+            <ul class="nav-menu-list">
+              <li class="nav-menu-item">
+                <a href="#courses" onclick="scrollToSection('#courses')" data-i18="link-courses"></a>
+              </li>
+              <li class="nav-menu-item">
+                <a href="#learn" onclick="scrollToSection('#learn')" data-i18="link-training"></a>
+              </li>
+              <li class="nav-menu-item">
+                <a href="#about" onclick="scrollToSection('#about')" data-i18="link-about"></a>
+              </li>
+              <li class="nav-menu-item">
+                <a href="#teachers" data-i18="link-teachers"></a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="menu-mobile">
+            <ul class="menu">
+              <li class="menu-item">
+                <a href="#courses" onclick="scrollToSection('#courses')" data-i18="link-courses"></a>
+              </li>
+              <li class="menu-item">
+                <a href="#learn" onclick="scrollToSection('#learn')" data-i18="link-training"></a>
+              </li>
+              <li class="menu-item">
+                <a href="#about" onclick="scrollToSection('#about')" data-i18="link-about"></a>
+              </li>
+              <li class="menu-item">
+                <a href="#teachers" data-i18="link-teachers"></a>
+              </li>
+            </ul>
+            <button type="button" class="hamburger">
+              <i class="menu-icon material-icons md-light">menu</i>
+              <i class="close-icon material-icons md-light">close</i>
+            </button>
+          </div>
+
+          <div class="select">
+            <select name="language" id="language" onchange="changeLanguage()">
+              <option value="en">EN</option>
+              <option value="ru">RU</option>
+            </select>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
         <div class="content-box">
-          <div class="header-content">
-            <h3>
-              <a href="./index.html"
-                ><img src="./assets/logo-redrover.svg" alt="Logo"
-              /></a>
-            </h3>
-            <nav class="navigation">
-              <ul class="nav-menu-list">
-                <li class="nav-menu-item">
-                  <a href="#courses" onclick="scrollToSection('#courses')"
-                    >Courses</a
-                  >
-                </li>
-                <li class="nav-menu-item">
-                  <a href="#learn" onclick="scrollToSection('#learn')"
-                    >Training</a
-                  >
-                </li>
-                <li class="nav-menu-item">
-                  <a href="#about" onclick="scrollToSection('#about')"
-                    >About school</a
-                  >
-                </li>
-                <li class="nav-menu-item">
-                  <a href="#teachers">Teachers</a>
-                </li>
-              </ul>
-            </nav>
-            <div class="switch">
-              <input
-                id="language-toggle"
-                class="check-toggle check-toggle-round-flat"
-                type="checkbox"
-              />
-              <label for="language-toggle"></label>
-              <span class="on">EN</span>
-              <span class="off">RU</span>
+          <div class="hero-container">
+            <div class="hero-content">
+              <h1 class="hero-title" data-i18="hero-title"></h1>
+              <p class="hero-description" data-i18="hero-description"></p>
+            </div>
+            <div class="hero-image">
+              <img src="./assets/logo-people.svg" alt="People">
+            </div>
+          </div>
+          <div class="btn-group">
+            <div class="hero-btn-join">
+              <a href="#join-us" onclick="scrollToSection('#join-us')" data-i18="hero-btn-join"></a>
+            </div>
+            <p class="hero-terms" data-i18="hero-terms"></p>
+          </div>
+        </div>
+      </section>
+      <section id="learn" class="learning-process">
+        <div class="content-box">
+          <h2 class="learning-process-title" data-i18="learning-process-title"></h2>
+          <p class="learning-process-description" data-i18="learning-process-description"></p>
+          <div class="learning-process-container">
+            <div class="learning-process-item">
+              <img class="image-1" src="./assets/calendar.svg" alt="calendar">
+              <p class="learning-process-item-description" data-i18="learning-calendar"></p>
+            </div>
+            <div class="learning-process-item">
+              <img class="image-2" src="./assets/hats.svg" alt="hats">
+              <p class="learning-process-item-description" data-i18="learning-hats"></p>
+            </div>
+            <div class="learning-process-item">
+              <img class="image-3" src="./assets/glass.svg" alt="glass">
+              <p class="learning-process-item-description" data-i18="learning-glass"></p>
+            </div>
+            <div class="learning-process-item">
+              <img class="image-4" src="./assets/circle.svg" alt="circle">
+              <p class="learning-process-item-description" data-i18="learning-circle"></p>
+            </div>
+            <div class="learning-process-item">
+              <img class="image-5" src="./assets/hands.svg" alt="hands">
+              <p class="learning-process-item-description" data-i18="learning-hands"></p>
+            </div>
+            <div class="learning-process-item">
+              <img class="image-6" src="./assets/file_icon.svg" alt="file">
+              <p class="learning-process-item-description" data-i18="learning-file"></p>
+            </div>
+            <div class="learning-process-item">
+              <img class="image-7" src="./assets/record.svg" alt="record">
+              <p class="learning-process-item-description" data-i18="learning-record"></p>
             </div>
           </div>
         </div>
-      </header>
-      <main id="main">
-        <section class="hero">
-          <div class="content-box">
-            <div class="hero-container">
-              <div class="hero-content">
-                <h1 class="hero-title">Non-commercial IT school RedRover</h1>
-                <p class="hero-description">
-                  We provide relevant knowledge, practical skills and
-                  opportunity to enter the American job market!
-                </p>
-                <div class="btn-group">
-                  <button class="hero-btn-join">
-                    <a href="#join-us" onclick="scrollToSection('#join-us')"
-                      >Join Us</a
-                    >
-                  </button>
-                  <p class="hero-terms">
-                    Semester starts <br />
-                    on January 2024
-                  </p>
-                </div>
-              </div>
-              <div class="hero-image">
-                <img src="./assets/logo-people.svg" alt="People" />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="learn" class="learning-process">
-          <div class="content-box">
-            <h2 class="learning-process-title">Learning process</h2>
-            <p class="learning-process-description">
-              How the educational process is organized
-            </p>
-            <div class="learning-process-container">
-              <div class="learning-process-item">
-                <img
-                  class="image-1"
-                  src="./assets/calendar.svg"
-                  alt="calendar"
-                />
-                <p class="learning-process-item-description">
-                  Live lessons on ZOOM with a teacher discussing theory and
-                  practice
-                </p>
-              </div>
-              <div class="learning-process-item">
-                <img class="image-2" src="./assets/hats.svg" alt="hats" />
-                <p class="learning-process-item-description">
-                  Learning in mini groups to increase efficiency
-                </p>
-              </div>
-              <div class="learning-process-item">
-                <img class="image-3" src="./assets/glass.svg" alt="glass" />
-                <p class="learning-process-item-description">
-                  Homework review and Q&A meetings with teachers
-                </p>
-              </div>
-              <div class="learning-process-item">
-                <img class="image-4" src="./assets/circle.svg" alt="circle" />
-                <p class="learning-process-item-description">
-                  Practice projects imitating “real work agile environment”
-                </p>
-              </div>
-              <div class="learning-process-item">
-                <img class="image-5" src="./assets/hands.svg" alt="hands" />
-                <p class="learning-process-item-description">
-                  Strong and supportive community on Slack
-                </p>
-              </div>
-              <div class="learning-process-item">
-                <img class="image-6" src="./assets/file_icon.svg" alt="file" />
-                <p class="learning-process-item-description">
-                  Three programming languages for your choosing
-                </p>
-              </div>
-              <div class="learning-process-item">
-                <img class="image-7" src="./assets/record.svg" alt="record" />
-                <p class="learning-process-item-description">
-                  Unlimited access to lesson recordings
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="courses" class="our-courses">
-          <div class="content-box">
-            <h2 class="our-courses-title">Our courses</h2>
-            <p class="our-courses-description">
-              Choose suitable free courses for your career track
-            </p>
-            <div class="our-courses-container">
-              <div class="our-courses-item">
-                <h3 class="our-courses-item-title">QA theory</h3>
-                <p class="our-courses-item-description">
-                  Goals, principles, types, methodologies and stages of testing.
-                  Terminology, test documentation. Fundamentals of automation.
-                  Test case writing practice
-                </p>
-                <div class="our-courses-tags-box">
-                  <span class="our-courses-tag">#QA manual</span>
-                  <span class="our-courses-tag">#QA automation</span>
-                </div>
-              </div>
-              <div class="our-courses-item">
-                <h3 class="our-courses-item-title">Java</h3>
-                <p class="our-courses-item-description">
-                  Java basics, Object-Oriented Programming. Learning Java for
-                  beginners. Creating a framework for automated UI testing
-                </p>
-                <div class="our-courses-tags-box">
-                  <span class="our-courses-tag">#QA automation</span>
-                </div>
-              </div>
-              <div class="our-courses-item">
-                <h3 class="our-courses-item-title">SQL basics</h3>
-                <p class="our-courses-item-description">
-                  Working with relational databases. Learning to work with SQL
-                  queries using practical examples.
-                </p>
-                <div class="our-courses-tags-box">
-                  <span class="our-courses-tag">#QA manual</span>
-                  <span class="our-courses-tag">#QA automation</span>
-                </div>
-              </div>
-              <div class="our-courses-item">
-                <h3 class="our-courses-item-title">JavaScript</h3>
-                <p class="our-courses-item-description">
-                  Basics of the language, cycles, functions, the concept of OOP.
-                  Familiarity with Node JS, Mocha, Chai. Introduction to
-                  Cypress: UI and API auto-tests. Working on a test project.
-                </p>
-                <div class="our-courses-tags-box">
-                  <span class="our-courses-tag">#QA automation</span>
-                </div>
-              </div>
-              <div class="our-courses-item">
-                <h3 class="our-courses-item-title">Interview Prep</h3>
-                <p class="our-courses-item-description">
-                  Practicing interviewing with mock interviews and analyzing the
-                  interviewee’s responses to commonly asked questions. Classes
-                  for beginner and advanced students
-                </p>
-                <div class="our-courses-tags-box">
-                  <span class="our-courses-tag">#QA manual</span>
-                  <span class="our-courses-tag">#QA automation</span>
-                </div>
-              </div>
-              <div class="our-courses-item">
-                <h3 class="our-courses-item-title">Python</h3>
-                <p class="our-courses-item-description">
-                  Variables, data types and programming principles. Basic
-                  Autotests for UI and API, creating a framework. Problem
-                  solving on codewars.com.
-                </p>
-                <div class="our-courses-tags-box">
-                  <span class="our-courses-tag">#QA automation</span>
-                </div>
-              </div>
-              <div class="our-courses-item">
-                <h3 class="our-courses-item-title">English</h3>
-                <p class="our-courses-item-description">
-                  Classes for beginner and advanced learners. Preparing for an
-                  interview in English. Working with Figma layouts and layout.
-                  Accent reduction lessons.
-                </p>
-                <div class="our-courses-tags-box">
-                  <span class="our-courses-tag">#QA manual</span>
-                  <span class="our-courses-tag">#QA automation</span>
-                </div>
-              </div>
-              <div class="our-courses-item">
-                <h3 class="our-courses-item-title">Frond-end</h3>
-                <p class="our-courses-item-description">
-                  Fundamentals of HTML and CSS. Website development using
-                  JavaScript. Working with Figma layouts and layout. Website
-                  development using the React framework.
-                </p>
-                <div class="our-courses-tags-box">
-                  <span class="our-courses-tag">#QA manual</span>
-                  <span class="our-courses-tag">#QA automation</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="join-us" class="join-us">
-          <div class="join-us-bg"></div>
-          <div class="content-box">
-            <div class="join-us-container">
-              <div class="join-us-content">
-                <h2 class="join-us-title">Join us</h2>
-                <p class="join-us-description">
-                  Fill in the contact form to get further instructions
-                </p>
-                <p class="join-us-text">
-                  We will send you an invitation link to the RedRover school
-                  Slack workspace.
-                </p>
-                <p class="join-us-text">
-                  For course enrollment, you only need to join our Slack
-                  workspace and wait for the semester to start!
-                </p>
-              </div>
-              <div class="join-us-form-box">
-                <form class="join-us-form">
-                  <input type="email" placeholder="Email" />
-                  <input type="text" placeholder="Name" />
-                  <label class="checkbox-label"
-                    >I agree with the
-                    <a href="#">personal data processing policy</a>
-                    <input
-                      type="checkbox"
-                      checked="unchecked"
-                      id="terms-and-cond"
-                    />
-                    <span class="checkmark"></span>
-                  </label>
-                  <button class="join-us-form-btn">
-                    <a href="#">Send Request</a>
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="about" class="about-us">
-          <div class="content-box">
-            <div class="about-us-container">
-              <div class="about-us-content">
-                <h2 class="about-us-title">About our school</h2>
-                <p class="about-us-description">
-                  For more than two years, RedRover. school has given people the
-                  opportunity to become software testing professionals. Over a
-                  thousand people have comprehensive and systematic knowledge
-                  trusted us to take their first steps in a new career.
-                </p>
-                <p class="about-us-description">
-                  Our school provides comprehensive and systematic knowledge in
-                  various testing areas, with an opportunity to take additional
-                  courses and to participate in testing projects. Classes are
-                  conducted online, in Russian and are scheduled to accommodate
-                  the PST time zone.
-                </p>
-                <p class="about-us-description">
-                  Participation in our courses do not require any special
-                  knowledge or preparation. The training is aimed to get the
-                  students into the job market quickly and efficiently. All
-                  educational programs are developed by teachers (active IT
-                  professionals) with a focus on practical application.
-                </p>
-                <p class="about-us-description">
-                  Join us to begin a new career as an IT professional!
-                </p>
-              </div>
-              <div class="about-us-image">
-                <img src="./assets/gears.svg" alt="Gears" />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="teachers" class="teachers">
-          <div class="content-box">
-            <div class="teachers-wrapper">
-              <h2 class="teachers-title">Teachers</h2>
-              <div class="teachers-container">
-                <div class="teachers-item">
-                  <div class="teachers-image-box">
-                    <img class="teachers-image" src="./assets/Sergey.png" />
-                    <div class="teachers-image-footer"></div>
-                  </div>
-                  <div class="teachers-description-box">
-                    <div class="teachers-hr"></div>
-                    <div class="teachers-description">
-                      <h3 class="teachers-name">Sergey Demyanenko</h3>
-                      <p class="teachers-position">Software engineer</p>
-                      <p class="teachers-description-text">
-                        I have been a teacher since 2006. I focus on programming
-                        in my lessons because every programmer can be a tester,
-                        but not every
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="teachers-item">
-                  <div class="teachers-image-box">
-                    <img
-                      class="teachers-image"
-                      src="./assets/13_Baha_Mametyarov.jpg"
-                    />
-                    <div class="teachers-image-footer"></div>
-                  </div>
-                  <div class="teachers-description-box">
-                    <div class="teachers-hr"></div>
-                    <div class="teachers-description">
-                      <h3 class="teachers-name">Baha Mametyarov</h3>
-                      <p class="teachers-position">Senior Consultant at CGI</p>
-                      <p class="teachers-description-text">
-                        I have over 18 years of experience in Tech. I’ve been
-                        teaching at the RedRover school since March 2022.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="teachers-item">
-                  <div class="teachers-image-box">
-                    <img
-                      class="teachers-image"
-                      src="./assets/6_Maria_Moroz.jpg"
-                    />
-                    <div class="teachers-image-footer"></div>
-                  </div>
-                  <div class="teachers-description-box">
-                    <div class="teachers-hr"></div>
-                    <div class="teachers-description">
-                      <h3 class="teachers-name">Maria Moroz</h3>
-                      <p class="teachers-position">QA Automation Engineer</p>
-                      <p class="teachers-description-text">
-                        I am a tech lead on Cypress projects and I also serve as
-                        an administrative coordinator at the RedRover school.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button class="teachers-btn-see-all">
-                <a href="./teachers/teachers.html">See all</a>
-              </button>
-            </div>
-          </div>
-        </section>
-        <section class="questions">
-          <div class="content-box">
-            <div class="questions-container">
-              <h2 class="questions-title">Frequently asked questions</h2>
-              <div class="questions-items-box">
-                <div class="questions-item">
-                  <button class="accordion">How long is the course?</button>
-                  <div class="panel">
-                    <p>4 months.</p>
-                  </div>
-                </div>
-                <div class="questions-item">
-                  <button class="accordion">
-                    What programming languages does the school offer?
-                  </button>
-                  <div class="panel">
-                    <p>Java, JavaScript, Python.</p>
-                  </div>
-                </div>
-                <div class="questions-item">
-                  <button class="accordion">
-                    Which programming language should I choose?
-                  </button>
-                  <div class="panel">
-                    <p>
-                      Most people think that the choice of a programming
-                      language is important. It is not. The demand for
-                      programming languages changes and as you embark on your
-                      career, you will find that sooner or later you will need
-                      to learn other programming languages as the market changes
-                      and as your job function or the industry that you work for
-                      changes. The good news is that once you understand the
-                      basics of programming and you know one programming
-                      language, learning others will be much easier and quicker.
-                      So, our advice is pick any language. It doesn't matter
-                      which one you choose. Pick one and get your foot in the
-                      door to start your career.
-                    </p>
-                  </div>
-                </div>
-                <div class="questions-item">
-                  <button class="accordion">
-                    What computer hardware do I need in order to take classes?
-                  </button>
-                  <div class="panel">
-                    <p>
-                      In order to study in our school, you will need a PC or
-                      laptop with internet access.
-                    </p>
-                  </div>
-                </div>
-                <div class="questions-item">
-                  <button class="accordion">
-                    How do I sign up for courses?
-                  </button>
-                  <div class="panel">
-                    <p>
-                      You need to join our workspace in Slack through the invite
-                      link - we will send it to your email after you fill out
-                      the form above. If you have already done so, then you are
-                      enrolled in the course. Keep an eye out for announcements
-                      in Slack. You can also join our telegram channel (link)
-                      and our social networks in order not to miss important
-                      information.
-                    </p>
-                  </div>
-                </div>
-                <div class="questions-item"></div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <footer class="footer">
+      </section>
+      <section id="courses" class="our-courses">
         <div class="content-box">
-          <div class="footer-container">
-            <div class="footer-media-box">
-              <h3>
-                <a href="./index.html"
-                  ><img src="./assets/logo-redrover.svg" alt="Logo"
-                /></a>
-              </h3>
-              <ul class="footer-media-list">
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://www.facebook.com/groups/redrovercommunity/?ref=share&mibextid=NSMWBT"
-                    ><img src="./assets/facebook.svg" alt="facebook"
-                  /></a>
-                </li>
-                <li>
-                  <a target="_blank" href="https://t.me/redroverschool"
-                    ><img src="./assets/telegramm.svg" alt="telegramm"
-                  /></a>
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://instagram.com/redrover.school?igshid=YmMyMTA2M2Y="
-                    ><img
-                      src="./assets/fa-brands_instagram.svg"
-                      alt="instagram"
-                  /></a>
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://www.linkedin.com/company/redrover-school"
-                    ><img
-                      src="./assets/linkedin_logo_icon_1.svg"
-                      alt="linkedin"
-                  /></a>
-                </li>
-              </ul>
+          <h2 class="our-courses-title" data-i18="our-courses-title"></h2>
+          <p class="our-courses-description" data-i18="our-courses-description"></p>
+          <div class="our-courses-container">
+            <div class="our-courses-item">
+              <h3 class="our-courses-item-title" data-i18="course-qa"></h3>
+              <p class="our-courses-item-description" data-i18="course-qa-description"></p>
+              <div class="our-courses-tags-box">
+                <span class="our-courses-tag">#QA manual</span>
+                <span class="our-courses-tag">#QA automation</span>
+              </div>
             </div>
-            <div>
-              <p class="footer-email">redrover@gmail.com</p>
+            <div class="our-courses-item">
+              <h3 class="our-courses-item-title" data-i18="course-java"></h3>
+              <p class="our-courses-item-description" data-i18="course-java-description"></p>
+              <div class="our-courses-tags-box">
+                <span class="our-courses-tag">#QA automation</span>
+              </div>
             </div>
+            <div class="our-courses-item">
+              <h3 class="our-courses-item-title" data-i18="course-sql"></h3>
+              <p class="our-courses-item-description" data-i18="course-sql-description"></p>
+              <div class="our-courses-tags-box">
+                <span class="our-courses-tag">#QA manual</span>
+                <span class="our-courses-tag">#QA automation</span>
+              </div>
+            </div>
+            <div class="our-courses-item">
+              <h3 class="our-courses-item-title" data-i18="course-js"></h3>
+              <p class="our-courses-item-description" data-i18="course-js-description"></p>
+              <div class="our-courses-tags-box">
+                <span class="our-courses-tag">#QA automation</span>
+              </div>
+            </div>
+            <div class="our-courses-item">
+              <h3 class="our-courses-item-title" data-i18="course-interview"></h3>
+              <p class="our-courses-item-description" data-i18="course-interview-description"></p>
+              <div class="our-courses-tags-box">
+                <span class="our-courses-tag">#QA manual</span>
+                <span class="our-courses-tag">#QA automation</span>
+              </div>
+            </div>
+            <div class="our-courses-item">
+              <h3 class="our-courses-item-title" data-i18="course-python"></h3>
+              <p class="our-courses-item-description" data-i18="course-python-description"></p>
+              <div class="our-courses-tags-box">
+                <span class="our-courses-tag">#QA automation</span>
+              </div>
+            </div>
+            <div class="our-courses-item">
+              <h3 class="our-courses-item-title" data-i18="course-english"></h3>
+              <p class="our-courses-item-description" data-i18="course-english-description"></p>
+              <div class="our-courses-tags-box">
+                <span class="our-courses-tag">#QA manual</span>
+                <span class="our-courses-tag">#QA automation</span>
+              </div>
+            </div>
+            <div class="our-courses-item">
+              <h3 class="our-courses-item-title" data-i18="course-frontend"></h3>
+              <p class="our-courses-item-description" data-i18="course-frontend-description"></p>
+              <div class="our-courses-tags-box">
+                <span class="our-courses-tag">#QA manual</span>
+                <span class="our-courses-tag">#QA automation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="join-us" class="join-us">
+        <div class="join-us-bg"></div>
+        <div class="content-box">
+          <div class="join-us-container">
+            <div class="join-us-content">
+              <h2 class="join-us-title" data-i18="join-us-title"></h2>
+              <p class="join-us-description" data-i18="join-us-description"></p>
+              <p class="join-us-text" data-i18="join-us-text-1"></p>
+              <p class="join-us-text" data-i18="join-us-text-2"></p>
+            </div>
+            <div class="join-us-form-box">
+              <form class="join-us-form">
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Name">
+                <label class="checkbox-label">
+                  <span data-i18="terms-and-cond"></span>
+                  <a href="#" data-i18="terms-and-cond-link"></a>
+                  <input type="checkbox" checked="checked" id="terms-and-cond">
+                  <span class="checkmark"></span>
+                </label>
+                <div class="join-us-form-btn">
+                  <a href="#" data-i18="join-us-btn"></a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="about-us">
+        <div class="content-box">
+          <div class="about-us-container">
+            <div class="about-us-content">
+              <h2 class="about-us-title" data-i18="about-us-title"></h2>
+              <p class="about-us-description" data-i18="about-us-description-1"></p>
+              <p class="about-us-description" data-i18="about-us-description-2"></p>
+              <p class="about-us-description" data-i18="about-us-description-3"></p>
+              <p class="about-us-description" data-i18="about-us-description-4"></p>
+            </div>
+            <div class="about-us-image">
+              <img src="./assets/gears.svg" alt="Gears">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="teachers" class="teachers">
+        <div class="content-box">
+          <div class="teachers-wrapper">
+            <h2 class="teachers-title" data-i18="teachers-title"></h2>
+            <div class="teachers-container">
+              <div class="teachers-item">
+                <div class="teachers-image-box">
+                  <img class="teachers-image" src="./assets/Sergey.png" alt="Sergey">
+                  <div class="teachers-image-footer"></div>
+                </div>
+                <div class="teachers-description-box">
+                  <div class="teachers-hr"></div>
+                  <div class="teachers-description">
+                    <h3 class="teachers-name" data-i18="sergey"></h3>
+                    <p class="teachers-position" data-i18="sergey-position"></p>
+                    <p class="teachers-description-text" data-i18="sergey-description"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="teachers-item">
+                <div class="teachers-image-box">
+                  <img class="teachers-image" src="./assets/13_Baha_Mametyarov.jpg" alt="Baha">
+                  <div class="teachers-image-footer"></div>
+                </div>
+                <div class="teachers-description-box">
+                  <div class="teachers-hr"></div>
+                  <div class="teachers-description">
+                    <h3 class="teachers-name" data-i18="baha"></h3>
+                    <p class="teachers-position" data-i18="baha-position"></p>
+                    <p class="teachers-description-text" data-i18="baha-description"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="teachers-item">
+                <div class="teachers-image-box">
+                  <img class="teachers-image" src="./assets/6_Maria_Moroz.jpg" alt="Maria">
+                  <div class="teachers-image-footer"></div>
+                </div>
+                <div class="teachers-description-box">
+                  <div class="teachers-hr"></div>
+                  <div class="teachers-description">
+                    <h3 class="teachers-name" data-i18="maria"></h3>
+                    <p class="teachers-position" data-i18="maria-position"></p>
+                    <p class="teachers-description-text" data-i18="maria-description"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="teachers-btn-see-all">
+              <a href="./teachers/teachers.html" data-i18="teachers-btn"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="questions">
+        <div class="content-box">
+          <div class="questions-container">
+            <h2 class="questions-title" data-i18="questions-title"></h2>
+            <div class="questions-items-box">
+              <div class="questions-item">
+                <button type="button" class="accordion" data-i18="questions-1"></button>
+                <div class="panel">
+                  <p data-i18="questions-1-answer"></p>
+                </div>
+              </div>
+              <div class="questions-item">
+                <button type="button" class="accordion" data-i18="questions-2"></button>
+                <div class="panel">
+                  <p data-i18="questions-2-answer"></p>
+                </div>
+              </div>
+              <div class="questions-item">
+                <button type="button" class="accordion" data-i18="questions-3"></button>
+                <div class="panel">
+                  <p data-i18="questions-3-answer"></p>
+                </div>
+              </div>
+              <div class="questions-item">
+                <button type="button" class="accordion" data-i18="questions-4"></button>
+                <div class="panel">
+                  <p data-i18="questions-4-answer"></p>
+                </div>
+              </div>
+              <div class="questions-item">
+                <button type="button" class="accordion" data-i18="questions-5"></button>
+                <div class="panel">
+                  <p data-i18="questions-5-answer"></p>
+                </div>
+              </div>
+              <div class="questions-item"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="content-box">
+        <div class="footer-container">
+          <div class="footer-media-box">
+            <h3>
+              <a href="./index.html"><img src="./assets/logo-redrover.svg" alt="Logo"></a>
+            </h3>
+            <ul class="footer-media-list">
+              <li>
+                <a target="_blank" href="https://www.facebook.com/groups/redrovercommunity/?ref=share&mibextid=NSMWBT">
+                  <img src="./assets/facebook.svg" alt="facebook">
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://t.me/redroverschool">
+                  <img src="./assets/telegramm.svg" alt="telegramm">
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://instagram.com/redrover.school?igshid=YmMyMTA2M2Y=">
+                  <img src="./assets/fa-brands_instagram.svg" alt="instagram">
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.linkedin.com/company/redrover-school">
+                  <img src="./assets/linkedin_logo_icon_1.svg" alt="linkedin">
+                </a>
+              </li>
+            </ul>
           </div>
           <div>
-            <p class="footer-copyright">
-              Copyright © 2022 RedRover School. All rights reserved
-            </p>
+            <p class="footer-email">redrover@gmail.com</p>
           </div>
         </div>
-      </footer>
-    </div>
+        <div>
+          <p class="footer-copyright" data-i18="footer-copyright"></p>
+        </div>
+      </div>
+    </footer>
+  </div>
 
-    <script src="./main.js"></script>
-  </body>
+  <script src="./main.js"></script>
+  <script src="./js/hamburger.js"></script>
+</body>
+
 </html>

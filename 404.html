@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 -Not Found</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,600;0,900;1,400&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/404.css">
      <link rel="stylesheet" href="./css/toggle.css">
+     <link rel="stylesheet" href="./css/mobile.css">    
   </head>
   <body>
     <div class="body-container">
@@ -21,41 +23,54 @@
           <div class="header-content">
             <h3>
               <a href="./index.html"
-                ><img src="./assets/logo-redrover.svg" alt="Logo"
-              /></a>
+                ><img src="./assets/logo-redrover.svg" alt="Logo"></a>
             </h3>
+
             <nav class="navigation">
               <ul class="nav-menu-list">
                 <li class="nav-menu-item">
-                  <a href="./index.html#courses" onclick="scrollToSection('#courses')"
-                    >Courses</a
-                  >
+                  <a href="./index.html#courses" onclick="scrollToSection('#courses')" data-i18="link-courses"></a>
                 </li>
                 <li class="nav-menu-item">
-                  <a href="./index.html#learn" onclick="scrollToSection('#learn')"
-                    >Training</a
-                  >
+                  <a href="./index.html#learn" onclick="scrollToSection('#learn')" data-i18="link-training"></a>
                 </li>
                 <li class="nav-menu-item">
-                  <a href="./index.html#about" onclick="scrollToSection('#about')"
-                    >About school</a
-                  >
+                  <a href="./index.html#about" onclick="scrollToSection('#about')" data-i18="link-about"></a>
                 </li>
                 <li class="nav-menu-item">
-                  <a href="./index.html#teachers">Teachers</a>
+                  <a href="./index.html#teachers" onclick="scrollToSection('#teachers')" data-i18="link-teachers"></a>
                 </li>
               </ul>
             </nav>
-            <div class="switch">
-              <input
-                id="language-toggle"
-                class="check-toggle check-toggle-round-flat"
-                type="checkbox"
-              />
-              <label for="language-toggle"></label>
-              <span class="on">EN</span>
-              <span class="off">RU</span>
+  
+            <div class="menu-mobile">
+              <ul class="menu">
+                <li class="menu-item">
+                  <a href="./index.html#courses" onclick="scrollToSection('#courses')" data-i18="link-courses"></a>
+                </li>
+                <li class="menu-item">
+                  <a href="./index.html#learn" onclick="scrollToSection('#learn')" data-i18="link-training"></a>
+                </li>
+                <li class="menu-item">
+                  <a href="./index.html#about" onclick="scrollToSection('#about')" data-i18="link-about"></a>
+                </li>
+                <li class="menu-item">
+                  <a href="./index.html#teachers" onclick="scrollToSection('#teachers')" data-i18="link-teachers"></a>
+                </li>
+              </ul>
+              <button type="button" class="hamburger">                
+                <i class="menu-icon material-icons md-light">menu</i>
+                <i class="close-icon material-icons md-light">close</i>
+              </button>
             </div>
+
+            <div class="select">
+              <select name="language" id="language" onchange="changeLanguage()">
+                 <option value="en">EN</option>
+                 <option value="ru">RU</option>                 
+              </select>
+           </div>
+            
           </div>
         </div>
       </header>
@@ -65,12 +80,12 @@
        <div class="not-found">
          <div class="content-box">
           <div class="not-found-container">
-            <div>
-              <h2 class="not-found-title">ERROR OCCURRED</h2>
-              <p class="not-found-description">The page on this link does not exist.</p>
-              <button class="redirect-button"><a href="./index.html">GO BACK TO THE HOME</a></button>
+            <div class="not-found-content">
+              <h2 class="not-found-title" data-i18="not-found-title"></h2>
+              <p class="not-found-description" data-i18="not-found-description"></p>
+              <div class="redirect-button"><a href="./index.html" data-i18="link-to-home"></a></div>
             </div>
-            <div>
+            <div class="not-found-image">
               <img src="./assets/404ERROR.svg" alt="404 error">
             </div>
           </div>
@@ -84,40 +99,28 @@
           <div class="footer-container">
             <div class="footer-media-box">
               <h3>
-                <a href="./index.html"
-                  ><img src="./assets/logo-redrover.svg" alt="Logo"
-                /></a>
+                <a href="./index.html"><img src="./assets/logo-redrover.svg" alt="Logo"></a>
               </h3>
               <ul class="footer-media-list">
                 <li>
-                  <a
-                    target="_blank"
-                    href="https://www.facebook.com/groups/redrovercommunity/?ref=share&mibextid=NSMWBT"
-                    ><img src="./assets/facebook.svg" alt="facebook"
-                  /></a>
+                  <a target="_blank" href="https://www.facebook.com/groups/redrovercommunity/?ref=share&mibextid=NSMWBT">
+                    <img src="./assets/facebook.svg" alt="facebook">
+                  </a>
                 </li>
                 <li>
-                  <a target="_blank" href="https://t.me/redroverschool"
-                    ><img src="./assets/telegramm.svg" alt="telegramm"
-                  /></a>
+                  <a target="_blank" href="https://t.me/redroverschool">
+                    <img src="./assets/telegramm.svg" alt="telegramm">
+                  </a>
                 </li>
                 <li>
-                  <a
-                    target="_blank"
-                    href="https://instagram.com/redrover.school?igshid=YmMyMTA2M2Y="
-                    ><img
-                      src="./assets/fa-brands_instagram.svg"
-                      alt="instagram"
-                  /></a>
+                  <a target="_blank" href="https://instagram.com/redrover.school?igshid=YmMyMTA2M2Y=">
+                    <img src="./assets/fa-brands_instagram.svg" alt="instagram">
+                  </a>
                 </li>
                 <li>
-                  <a
-                    target="_blank"
-                    href="https://www.linkedin.com/company/redrover-school"
-                    ><img
-                      src="./assets/linkedin_logo_icon_1.svg"
-                      alt="linkedin"
-                  /></a>
+                  <a target="_blank" href="https://www.linkedin.com/company/redrover-school">
+                    <img src="./assets/linkedin_logo_icon_1.svg" alt="linkedin">
+                  </a>
                 </li>
               </ul>
             </div>
@@ -126,13 +129,12 @@
             </div>
           </div>
           <div>
-            <p class="footer-copyright">
-              Copyright © 2022 RedRover School. All rights reserved
-            </p>
+            <p class="footer-copyright" data-i18="footer-copyright"></p>
           </div>
         </div>
       </footer>
     </div>
     <script src="./main.js"></script>
+    <script src="./js/hamburger.js"></script>
   </body>
 </html>

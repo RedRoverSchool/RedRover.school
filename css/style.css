@@ -13,6 +13,13 @@ html {
   color: #0c0016;
   overflow: hidden;
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: none;  
+}
+
+#main {
+  width: 100%;
 }
 
 .header,
@@ -23,19 +30,20 @@ html {
   justify-content: space-between;
   align-items: center;
   color: #fef4f9;
+  width: 100%;
 }
 
 .header {
   position: fixed;
-  top: 0;
-  width: 100%;
+  top: 0;  
   z-index: 5;
   height: 120px;
 }
 
 .content-box {
-  width: 62%;
+  width: 1200px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 .header-content {
@@ -61,9 +69,23 @@ h3 img {
   font-weight: 600;  
 }
 
+.nav-menu-item {
+  text-align: center;
+}
+
 .nav-menu-list a {
   text-decoration: none;
-  color: #fef4f9;
+  color: #fef4f9; 
+}
+
+.burger-menu {
+  display: none;
+}
+.menu-mobile {
+  display: none;
+}
+.close-icon {
+  display: none;
 }
 
 
@@ -77,9 +99,12 @@ h3 img {
 
 .hero-container {
   display: flex;
-  flex-direction: row;
-  gap: 3rem;
+  flex-direction: row;  
   padding-top: 50px;
+}
+
+.hero-content {
+  width: 57%;
 }
 
 .hero-title {
@@ -99,11 +124,9 @@ h3 img {
 
 .btn-group {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 15%;
-  gap: 1rem;
+  flex-direction: row; 
+  align-items: center; 
+  gap: 2rem;  
 }
 
 .hero-btn-join,
@@ -119,9 +142,12 @@ h3 img {
   background-color: #e20026;
   border-color: transparent;
   border-style: solid;
-  min-width: 336px;
+  width: 336px;
   height: 72px;
   border: #e20026 3px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-btn-join a,
@@ -149,8 +175,15 @@ h3 img {
   line-height: 31px;
 }
 
-.hero-image {
-  margin-top: 5rem;
+.hero-image {  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43%;
+}
+
+.hero-image img {
+  width: 100%;
 }
 
 .hero::after,
@@ -185,8 +218,7 @@ h3 img {
   transform: skewY(-3.6deg);
 }
 
-.teachers::after {
-  /* z-index: -4; */
+.teachers::after {  
   transform-origin: right bottom;
   transform: skewY(-3.6deg);
 }
@@ -195,6 +227,7 @@ h3 img {
 .learning-process,
 .about-us {
   margin-top: 200px;
+  width: 100%;
 }
 
 .learning-process-title,
@@ -224,13 +257,14 @@ h3 img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: center;  
   gap: 4rem;
+  width: 100%; 
+  margin-top: 50px
 }
 
 .learning-process-item {
-  width: 20%;
+  width: 230px;
 }
 
 .image-1 {
@@ -286,9 +320,7 @@ h3 img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .our-courses-item {
@@ -322,8 +354,7 @@ h3 img {
 }
 
 .join-us-bg {
-  background-image: url(../assets/bg_redrover_caption.svg);
-  /* background-repeat: no-repeat; */
+  background-image: url(../assets/bg_redrover_caption.svg);  
   background-size: cover;
   width: 100%;
   height: 110%;
@@ -335,9 +366,9 @@ h3 img {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  top: 30%;
+  top: 30%; 
   color: #fef4f9;
-  width: 62%;
+  width: 1200px;
 }
 
 .join-us-content {
@@ -386,17 +417,20 @@ h3 img {
   outline: none;
 }
 
-.checkbox-label {
+.checkbox-label{
   display: block;
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 18px;
+  /* font-size: 18px; */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.checkbox-label span {
+  font-size: 16px;
 }
 
 .checkbox-label input {
@@ -469,16 +503,24 @@ h3 img {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 3rem;
+  gap: 3rem; 
+  padding-right: 1rem;
 }
 
-.about-us-image {
-  width: 45%;
+.about-us-content {
+  width: 55%;
+}
+
+.about-us-image {  
   margin-top: 2rem;
+  width: 45%;
+}
+
+.about-us-image img {
+  width: 100%;  
 }
 
 /* TEACHERS */
-
 .teachers {
   background-color: #fef4f9;
   position: relative;
@@ -501,7 +543,7 @@ h3 img {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .teachers-item {
@@ -528,8 +570,7 @@ h3 img {
 
 .teachers-image {
   width: 300px;
-  height: auto;
-  /* border-bottom: #b396bc solid 25px;   */
+  height: auto; 
 }
 
 .teachers-description-box {
@@ -595,6 +636,9 @@ h3 img {
   cursor: pointer;
   border: #230040 3px solid;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .teachers-btn-see-all:hover {
@@ -615,7 +659,6 @@ h3 img {
 }
 
 /* QUESTIONS and ANSWERS */
-
 .questions {
   background-color: #230040;
   padding-top: 150px;
@@ -632,6 +675,7 @@ h3 img {
   flex-direction: column;
   justify-content: center;
   padding: 2rem 0;
+  padding-right: 1rem
 }
 
 .questions-item {
