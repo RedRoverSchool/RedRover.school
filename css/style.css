@@ -235,7 +235,8 @@ h3 img {
 .join-us-title,
 .about-us-title,
 .teachers-title,
-.questions-title {
+.questions-title,
+.reviews-title {
   font-size: 45px;
   line-height: 1.55;
   font-weight: 900;
@@ -520,6 +521,135 @@ h3 img {
   width: 100%;  
 }
 
+/* REVIEWS */
+.slider-container {  
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;  
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 500px;
+}
+
+.slide {
+  display: flex;
+  width: 200%;
+  padding: 0 2rem;
+}
+
+.card {
+  flex: 1;
+}
+
+.card { 
+  margin: 10px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.card-content, .card-review {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-review {
+  align-items: start;
+}
+
+.card-image img {
+  width: 200px;
+  border-radius: 20px;
+}
+
+.reviewer-media-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.review-link img {
+  width: 30px;
+  border: 1px solid #230040;
+  border-radius: 50%;
+  background-color: #230040;
+  opacity: 0.5;
+}
+
+.review-link img:hover {
+  opacity: 1;
+}
+
+.reviewer .reviewer-name {
+  font-size: 22px; 
+  font-weight: 600;
+  line-height: 26px;
+  text-decoration: none;
+  color: #230040;
+  text-align: center;
+}
+
+.read-more-review {
+  text-decoration: none; 
+  display: inline; 
+  color: #230040;
+}
+
+.read-more-review:hover {
+  font-weight: 600;
+}
+
+.card-review {
+  height: 100%;
+}
+
+.slider-txt {
+  padding-right: 10px;
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: justify;
+  text-indent: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 44px;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+}
+
+.prev {
+  left: 2px;
+}
+
+.next {
+  right: 2px;
+}
+
+
+
 /* TEACHERS */
 .teachers {
   background-color: #fef4f9;
@@ -615,7 +745,8 @@ h3 img {
   font-style: italic;
 }
 
-.teachers-description-text {
+.teachers-description-text, 
+.reviewer-name {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 500;
@@ -623,7 +754,8 @@ h3 img {
   margin: 0;
 }
 
-.teachers-btn-see-all {
+.teachers-btn-see-all,
+.slider-btn {
   width: 360px;
   height: 72px;
   font-size: 22px;
@@ -641,15 +773,18 @@ h3 img {
   align-items: center;
 }
 
-.teachers-btn-see-all:hover {
+.teachers-btn-see-all:hover,
+.slider-btn:hover {
   background-color: #ffffff;
 }
 
-.teachers-btn-see-all:hover a {
+.teachers-btn-see-all:hover a,
+.slider-btn:hover a {
   color: #230040;
 }
 
-.teachers-btn-see-all a {
+.teachers-btn-see-all a,
+.slider-btn a {
   text-decoration: none;
   color: #ffffff;
   text-transform: uppercase;

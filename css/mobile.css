@@ -58,6 +58,18 @@
     width: 400px;
   }
 }
+@media only screen and (max-width: 950px) {
+  .card {
+    flex-direction: column;
+    gap: 0;
+  }
+  .card-content {
+    justify-content: start;
+  }
+  .card-review {
+
+  }
+}
 @media only screen and (max-width: 820px) {
   h3 img {
     height: 30px;
