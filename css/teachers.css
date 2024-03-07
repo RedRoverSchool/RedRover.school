@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.body-container {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fef4f9;
+  color: #0c0016;
+  overflow: hidden;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.content-box {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background-color: #230040;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #fef4f9; 
+  position: fixed;
+  width: 100vw;
+  z-index: 3;
+  height: 120px;  
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+h3 img {
+  height: 36px;
+}
+
+.nav-menu-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  font-size: 20px;
+  list-style: none;
+  font-weight: 600;
+}
+
+.nav-menu-list a {
+  text-decoration: none;
+  color: #fef4f9;
+}
+
+.burger-menu {
+  display: none;
+}
+.menu-mobile {
+  display: none;
+}
+.close-icon {
+  display: none;
+}
+
+.space2 {
+  height: 150px;
+  background-color: #230040;
+}
+
+.teachers {
+  position: relative;
+  z-index: 2;
+  background-color: #fef4f9;
+  padding-bottom: 100px;
+  margin-top: 100px;
+}
+
+.teachers::after,
+.header::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  bottom: 1px;
+  left: 0;
+  right: 0;
+}
+
+.header::after {
+  z-index: -1;
+  transform-origin: right bottom;
+  transform: skewY(-3.6deg);
+}
+
+.teachers::after {
+  z-index: -2;
+  transform-origin: right bottom;
+  transform: skewY(-3.6deg);
+}
+
+/* TEACHERS */
+
+.teachers-title {
+  font-size: 45px;
+  line-height: 1.55;
+  font-weight: 900;
+  line-height: 70px;
+  margin-bottom: 0;
+}
+
+.teachers-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 3rem;
+  position: relative;
+  z-index: 2; 
+  margin-top: 80px;
+}
+
+.teachers-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem 1rem;
+}
+
+.teachers-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+.teachers-image-box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.teachers-image-footer {
+  position: absolute;
+  bottom: 0;
+  height: 25px;
+  width: 100%;
+  background-color: #b396bc;
+  z-index: 2;
+}
+
+.temp-image {
+  height: 440px;
+  width: 300px;
+  background-color: #b396bc;
+}
+
+.teachers-image {
+  width: 300px;
+  height: auto;
+}
+
+.teachers-description-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  z-index: 2;
+  margin-left: -2rem;
+}
+
+.teachers-hr {
+  height: 3rem;
+  border-bottom: #230040 solid 2px;
+}
+
+.teachers-description {
+  width: 300px;
+  background-color: #230040;
+  color: #fef4f9;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding: 2rem;
+}
+
+.teachers-name {
+  color: #fef4f9;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 600;
+  line-height: 26px;
+  margin: 0;
+}
+
+.teachers-position {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  line-height: 24px;
+  font-style: italic;
+}
+
+.teachers-description-text {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0;
+}
+
+.breadcrumbs {
+  margin-top: 3rem;
+}
+
+.breadcrumbs span {
+  color: #0c0016;
+  font-size: 20px;
+  line-height: 1.55;
+  font-weight: 500;
+  line-height: 31px;
+  padding: 0 10px;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #0c0016;
+  border-bottom: #0c0016 2px solid;
+}
+
+/* footer */
+.footer {
+  background-color: #0c0016;
+  margin-top: 0;
+  color: #fef4f9;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.footer-media-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.footer-media-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 500;
+  letter-spacing: 1.4px;
+  line-height: 22px;
+  padding-bottom: 2rem;
+  text-align: center;
+}
