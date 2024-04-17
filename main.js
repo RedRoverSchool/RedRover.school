@@ -340,7 +340,15 @@ function scrollToSection(sectionId) {
 function changeLanguage() { 
   var selectedLanguage = document.getElementById("language").value;
   localStorage.setItem("language", selectedLanguage);
+  setQueryParameter('lang', selectedLanguage);
   applyTranslation(selectedLanguage);  
+}
+
+function setQueryParameter(param, value) {
+  const urlParams = new URLSearchParams(window.location.search);
+  urlParams.set(param, value);
+  const newUrl = window.location.pathname + '?' + urlParams.toString();
+  window.history.replaceState({}, '', newUrl);
 }
 
 
@@ -353,16 +361,28 @@ function applyTranslation(language) {
   }); 
 }
 
-function getLocalStorage() {
-  if (localStorage.getItem('language')) {
-      applyTranslation(localStorage.getItem('language'));
-      const select = document.querySelector('select');
-      select.value = localStorage.getItem('language');     
+function getLanguage() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const selectedLanguage = urlParams.get('lang');
+  if (selectedLanguage) {
+    return selectedLanguage;
   } else {
-    applyTranslation('en');   
+    if(localStorage.getItem('language')) {
+      return localStorage.getItem('language')
+    } else {
+      return 'en';
+    }
   }
-  const body = document.querySelector(".body-container");
-  body.style.display = 'block'; 
-};
+}
 
-window.addEventListener('load', getLocalStorage);
+function initializePage() {
+  const selectedLanguage = getLanguage();  
+  applyTranslation(selectedLanguage);
+  setQueryParameter('lang', selectedLanguage);
+  const select = document.querySelector('select');
+  select.value = selectedLanguage;
+  const body = document.querySelector(".body-container");
+  body.style.display = 'block';
+}
+
+window.addEventListener('load', initializePage);
