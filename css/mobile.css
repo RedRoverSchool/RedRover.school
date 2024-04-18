@@ -17,15 +17,19 @@
   }
 }
 
+@media only screen and (max-width: 1080px) {
+  .nav-menu-list {
+    gap: 1rem;
+    padding: 5px;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .content-box {
     width: 100vw;
     margin: 0 1rem;
   }
-  .nav-menu-list {
-    gap: 2rem;
-    padding: 5px;
-  }
+
   .hero-title {
     font-size: 42px;
     line-height: 60px;
@@ -40,9 +44,9 @@
   .join-us-container {
     width: calc(100vw - 60px);
   }
-  .join-us-form-btn {
+  /* .join-us-form-btn {
     width: 100%;
-  }
+  } */
   .footer-media-box {
     gap: 1rem;
   }
@@ -62,22 +66,27 @@
   .card {
     flex-direction: column;
     gap: 0;
+    height: fit-content;
   }
   .card-content {
     justify-content: start;
   }
-  .card-review {
-
+  .nav-menu-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+  }
+  .slider-txt{
+    height: 100px;
   }
 }
+
 @media only screen and (max-width: 820px) {
   h3 img {
     height: 30px;
   }
-  .nav-menu-list {
-    gap: 1rem;
-  }
-  nav-menu-item {
+  .nav-menu-item {
     font-size: 18px;
   }
   .not-found-image img {
@@ -200,9 +209,13 @@
   }
   .join-us-container {
     flex-direction: column;
-    top: 20%;
-    padding-left: 1rem;
-    width: calc(100vw * 2 - 20px);
+    top: 20%;  
+    left: 0;
+    width: 100%
+  }
+  .join-us-content,
+  .join-us-form-box {
+    width: 90%;
   }
   .join-us-form-box {
     padding-top: 0;
@@ -267,7 +280,7 @@
     gap: 0;
   }
   .not-found-container {
-    flex-direction: column;    
+    flex-direction: column;
   }
   .not-found-content {
     text-align: center;
@@ -310,9 +323,12 @@
   }
 }
 
-@media screen and (max-width: 460px) { 
+@media screen and (max-width: 460px) {
   h3 img {
     height: 24px;
+  }
+  .slider-btn, .teachers-btn-see-all {
+    width: auto;
   }
 }
 
@@ -327,7 +343,7 @@
   .hero-title {
     font-size: 30px;
     line-height: 42px;
-  } 
+  }
   .our-courses-tags-box {
     flex-direction: column;
     gap: 0;
@@ -347,7 +363,7 @@
   .not-found-image img {
     width: 280px;
   }
-  .redirect-button{
+  .redirect-button {
     min-width: 260px;
   }
   .join-us-form input {

@@ -367,6 +367,7 @@ h3 img {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   top: 30%; 
   color: #fef4f9;
   width: 1200px;
@@ -496,6 +497,13 @@ h3 img {
   font-weight: 700;
   height: 72px;
   margin: 0 auto;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3rem;
 }
 
 /* ABOUT US */

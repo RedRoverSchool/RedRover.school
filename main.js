@@ -40,6 +40,10 @@ const i18Obj = {
     "join-us-description": "Fill in the contact form to get further instructions",
     "join-us-text-1": "We will send you an invitation link to the RedRover school Slack workspace.",
     "join-us-text-2": "For course enrollment, you only need to join our Slack workspace and wait for the semester to start!",
+    "join-us-instruction-1": "1. Go to our telegramm channel to join our school's Slack workspase",
+    "join-us-instruction-2": "2. Go to #General chat",
+    "join-us-instruction-3": "3. Find active invite to RedRover School Slack in pin messages",
+    "join-us-telegramm": "GO TO TELEGRAMM",
     "terms-and-cond": "I agree with the ",
     "terms-and-cond-link": "personal data processing policy",
     "join-us-btn": "Send Request",
@@ -189,6 +193,10 @@ const i18Obj = {
     "join-us-description": "Заполни форму, получи приглашение",
     "join-us-text-1": "Мы в течении 24 часов отправим инвайт ссылку на коммьюнити школы RedRover и письмо с инструкцией.",
     "join-us-text-2": "Чтобы начать обучение надо зарегистрироваться в Slack, выбрать каналы с желаемыми курсами и дождаться начала занятий!",
+    "join-us-instruction-1": "1. Перейдите в наш телеграмм канал для добавления в рабочее пространство школы в Слак",
+    "join-us-instruction-2": "2. Перейдите в чат #Общее",
+    "join-us-instruction-3": "3. Найдите активное приглашение в Слак школы РедРовер в закрепленных сообщениях",
+    "join-us-telegramm": "ПЕРЕЙТИ В ТЕЛЕГРАММ",
     "terms-and-cond": "Соглашаюсь с ",
     "terms-and-cond-link": "политикой обработки персональных данных",
     "join-us-btn": "ХОЧУ УЧИТЬСЯ",
@@ -383,6 +391,24 @@ function initializePage() {
   select.value = selectedLanguage;
   const body = document.querySelector(".body-container");
   body.style.display = 'block';
+  checkScreenSize();
+}
+
+function checkScreenSize() {
+  const screenWidth = window.innerWidth;
+ 
+  const elementsToHide = document.querySelectorAll('.hide-below-550px');
+
+  if (screenWidth < 670) {
+    elementsToHide.forEach(element => {
+      element.style.display = 'none';
+    });
+  } else {
+    elementsToHide.forEach(element => {
+      element.style.display = 'flex'; 
+    });
+  }
 }
 
 window.addEventListener('load', initializePage);
+window.addEventListener('resize', checkScreenSize);
