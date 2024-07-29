@@ -1,0 +1,50 @@
+select {
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  -ms-appearance:none;
+  appearance:none;
+  outline:0;
+  box-shadow:none;
+  border: none;  
+  background-color: #230040;
+  background-image: none;
+  flex: 1;
+  padding-left: 5px;
+  color:#fef4f9;
+  cursor:pointer;
+  font-size: 20px;   
+  /* font-weight: 600; */
+}
+select::-ms-expand {
+  display: none;
+}
+.select {
+  position: relative;
+  display: flex;
+  width: 4em;
+  height: 2em;
+  line-height: 3;  
+  overflow: hidden;
+  border: none;
+}
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: -7px;
+  right: 0;
+  padding: 0 0.5em; 
+  cursor:pointer;
+  pointer-events:none;
+  transition:.25s all ease;
+}
+.select:hover::after {
+  color: #b396bc; 
+}
+select option:not(:checked),
+select option:hover {
+  background-color: #fef4f9;
+  color: #230040;
+}
+select option {
+  background-color: #b396bc;  
+}

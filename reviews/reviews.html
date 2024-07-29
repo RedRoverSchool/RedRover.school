@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teachers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,600;0,900;1,400&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/teachers.css">
+  <link rel="stylesheet" href="../css/reviews.css">
+  <link rel="stylesheet" href="../css/toggle.css">
+  <link rel="stylesheet" href="../css/mobile.css">
+</head>
+
+<body>
+  <div class="body-container">
+    <header class="header">
+      <div class="content-box">
+        <div class="header-content">
+          <h3>
+            <a href="../index.html"><img src="../assets/logo-redrover.svg" alt="Logo"></a>
+          </h3>
+
+          <nav class="navigation">
+            <ul class="nav-menu-list">
+              <li class="nav-menu-item">
+                <a href="../index.html#courses" onclick="scrollToSection('#courses')" data-i18="link-courses"></a>
+              </li>
+              <li class="nav-menu-item">
+                <a href="../index.html#learn" onclick="scrollToSection('#learn')" data-i18="link-training"></a>
+              </li>
+              <li class="nav-menu-item">
+                <a href="../index.html#about" onclick="scrollToSection('#about')" data-i18="link-about"></a>
+              </li>
+              <li class="nav-menu-item">
+                <a href="../index.html#reviews" onclick="scrollToSection('#reviews')" data-i18="link-reviews"></a>
+              </li>
+              <li class="nav-menu-item">
+                <a href="../index.html#teachers" onclick="scrollToSection('#teachers')" data-i18="link-teachers"></a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="menu-mobile">
+            <ul class="menu">
+              <li class="menu-item">
+                <a href="../index.html#courses" onclick="scrollToSection('#courses')" data-i18="link-courses"></a>
+              </li>
+              <li class="menu-item">
+                <a href="../index.html#learn" onclick="scrollToSection('#learn')" data-i18="link-training"></a>
+              </li>
+              <li class="menu-item">
+                <a href="../index.html#about" onclick="scrollToSection('#about')" data-i18="link-about"></a>
+              </li>
+              <li class="menu-item">
+                <a href="../index.html#reviews" onclick="scrollToSection('#reviews')" data-i18="link-reviews"></a>
+              </li>
+              <li class="menu-item">
+                <a href="../index.html#teachers" onclick="scrollToSection('#teachers')" data-i18="link-teachers"></a>
+              </li>
+            </ul>
+            <button type="button" class="hamburger">
+              <i class="menu-icon material-icons md-light">menu</i>
+              <i class="close-icon material-icons md-light">close</i>
+            </button>
+          </div>
+
+          <div class="select">
+            <select name="language" id="language" onchange="changeLanguage()">
+              <option value="en">EN</option>
+              <option value="ru">RU</option>
+            </select>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="reviews">
+        <div class="content-box">
+          <div class="reviews-wrapper">
+            <div class="breadcrumbs">
+              <span><a href="../index.html" data-i18="link-home"></a></span>
+              <span> /</span>
+              <span data-i18="link-reviews"></span>
+            </div>
+            <h2 class="reviews-title" data-i18="reviews-title"></h2>
+
+            <div class="reviews-container">
+              <div class="review">
+                <img src="../assets/7_Marina_Mikhailovsk.jpg" width="300px" alt="" class="left-img">
+                <div class="reviewer-name">
+                  <a href="https://www.linkedin.com/company/redrover-school" target="_blank" class="reviewer-name"
+                    data-i18="review-1"></a>
+                  <p class="position" data-i18="review-1-position"></p>
+                </div>
+                <p data-i18="review-1-description" class="review-description"></p>
+              </div>
+              <div class="create-line"></div>
+              <div class="review">
+                <img src="../assets/7_Marina_Mikhailovsk.jpg" width="300px" alt="" class="right-img">
+                <div class="reviewer-name">
+                  <a href="https://www.linkedin.com/company/redrover-school" target="_blank" class="reviewer-name"
+                    data-i18="review-1"></a>
+                  <p class="position" data-i18="review-1-position"></p>
+                </div>
+                <p data-i18="review-1-description" class="review-description"></p>
+              </div>
+              <div class="create-line"></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <div class="space2"></div>
+    </main>
+
+    <footer class="footer">
+      <div class="content-box">
+        <div class="footer-container">
+          <div class="footer-media-box">
+            <h3>
+              <a href="../index.html"><img src="../assets/logo-redrover.svg" alt="Logo"></a>
+            </h3>
+            <ul class="footer-media-list">
+              <li>
+                <a target="_blank" href="https://www.facebook.com/groups/redrovercommunity/?ref=share&mibextid=NSMWBT">
+                  <img src="../assets/facebook.svg" alt="facebook">
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://t.me/redroverschool">
+                  <img src="../assets/telegramm.svg" alt="telegramm">
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://instagram.com/redrover.school?igshid=YmMyMTA2M2Y=">
+                  <img src="../assets/fa-brands_instagram.svg" alt="instagram">
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.linkedin.com/company/redrover-school">
+                  <img src="../assets/linkedin_logo_icon_1.svg" alt="linkedin">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="footer-email">redrover@gmail.com</p>
+          </div>
+        </div>
+        <div>
+          <p class="footer-copyright" data-i18="footer-copyright"></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="../main.js"></script>
+  <script src="../js/hamburger.js"></script>
+</body>
+
+</html>
