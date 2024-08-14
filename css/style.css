@@ -198,30 +198,22 @@ h3 img {
   bottom: 0;
   left: 0;
   right: 0;
+  transform-origin: right bottom;
+  transform: skewY(-2.6deg);
 }
 
 .hero::after {
   z-index: -1;
-  transform-origin: right bottom;
-  transform: skewY(-3.6deg);
 }
 
 .our-courses::after {
   z-index: -2;
-  transform-origin: right bottom;
-  transform: skewY(-3.6deg);
 }
 
 .join-us::after {
   z-index: -3;
-  transform-origin: right bottom;
-  transform: skewY(-3.6deg);
 }
 
-.teachers::after {  
-  transform-origin: right bottom;
-  transform: skewY(-3.6deg);
-}
 
 /* Learning process */
 .learning-process,
@@ -909,6 +901,20 @@ h3 img {
   font-weight: 500;
   letter-spacing: 1.4px;
   line-height: 22px;
-  padding-bottom: 2rem;
+  /* padding-bottom: 2rem; */
   text-align: center;
+}
+
+.footer-creator {
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 500;
+  letter-spacing: 1.4px;
+  line-height: 22px;
+  text-align: right;
+}
+
+.footer-creator a {
+  color: #fef4f9;
+  text-decoration: none;
 }

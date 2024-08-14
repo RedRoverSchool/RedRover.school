@@ -117,13 +117,13 @@ h3 img {
 .header::after {
   z-index: -1;
   transform-origin: right bottom;
-  transform: skewY(-3.6deg);
+  transform: skewY(-2.6deg);
 }
 
 .not-found::after {
   z-index: -2;
   transform-origin: right bottom;
-  transform: skewY(-3.6deg);
+  transform: skewY(-2.6deg);
 }
 
 .not-found-container {
