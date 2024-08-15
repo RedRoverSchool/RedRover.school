@@ -75,6 +75,7 @@ const i18Obj = {
     "questions-5": "How do I sign up for courses?",
     "questions-5-answer": "You need to join our workspace in Slack through the invite link - we will send it to your email after you fill out the form above. If you have already done so, then you are enrolled in the course. Keep an eye out for announcements in Slack. You can also join our telegram channel (link) and our social networks in order not to miss important information.",
     "footer-copyright": "Copyright © 2022 RedRover School. All rights reserved.",
+    "footer-creator": "Created by Iryna Kolhanova",
 
     "link-home": "Home",
     "dmitry": "Dmitry Ermolaev",
@@ -228,6 +229,7 @@ const i18Obj = {
     "questions-5": "Как записаться на курсы?",
     "questions-5-answer": "Вам необходимо вступить в наше рабочее пространство в Slack по инвайт ссылки – мы вышлем ее на имейл после заполнения формы выше. Если вы уже это сделали, то вы на курсе. Следите за объявлениями в Slack. Также вы можете присоединиться к нашему телеграм-каналу и нашим соцсетям, чтобы точно не пропустить важную информацию.",
     "footer-copyright": "Copyright © 2022 RedRover School. Все права защищены.",
+    "footer-creator": "Сайт разработан Ириной Колгановой",
 
     "link-home": "Главная",
     "dmitry": "Дмитрий Ермолаев",
