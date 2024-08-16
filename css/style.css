@@ -199,7 +199,7 @@ h3 img {
   left: 0;
   right: 0;
   transform-origin: right bottom;
-  transform: skewY(-2.6deg);
+  transform: skewY(-3.6deg);
 }
 
 .hero::after {
