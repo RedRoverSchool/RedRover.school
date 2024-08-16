@@ -79,16 +79,34 @@ h3 img {
   background-color: #230040;
 }
 
+.breadcrumbs-wrapper {
+ margin-top: 140px;
+}
+
+.breadcrumbs span {
+  color: #0c0016;
+  font-size: 20px;
+  line-height: 1.55;
+  font-weight: 500;
+  line-height: 31px;
+  padding: 0 10px;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #0c0016;
+  border-bottom: #0c0016 2px solid;
+}
+
+/* TEACHERS */
 .teachers {
   position: relative;
   z-index: 2;
   background-color: #fef4f9;
   padding-bottom: 100px;
-  margin-top: 100px;
 }
 
-.teachers::after,
-.header::after {
+.teachers::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -97,21 +115,10 @@ h3 img {
   bottom: 1px;
   left: 0;
   right: 0;
-}
-
-.header::after {
-  z-index: -1;
-  transform-origin: right bottom;
-  transform: skewY(-2.6deg);
-}
-
-.teachers::after {
   z-index: -2;
   transform-origin: right bottom;
-  transform: skewY(-2.6deg);
+  transform: skewY(-3.6deg);
 }
-
-/* TEACHERS */
 
 .teachers-title {
   font-size: 45px;
@@ -119,6 +126,7 @@ h3 img {
   font-weight: 900;
   line-height: 70px;
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 .teachers-wrapper {
@@ -127,8 +135,7 @@ h3 img {
   justify-content: space-around;
   gap: 3rem;
   position: relative;
-  z-index: 2; 
-  margin-top: 80px;
+  z-index: 2;  
 }
 
 .teachers-container {
@@ -223,25 +230,6 @@ h3 img {
   margin: 0;
 }
 
-.breadcrumbs {
-  margin-top: 3rem;
-}
-
-.breadcrumbs span {
-  color: #0c0016;
-  font-size: 20px;
-  line-height: 1.55;
-  font-weight: 500;
-  line-height: 31px;
-  padding: 0 10px;
-}
-
-.breadcrumbs a {
-  text-decoration: none;
-  color: #0c0016;
-  border-bottom: #0c0016 2px solid;
-}
-
 /* footer */
 .footer {
   background-color: #0c0016;
@@ -280,6 +268,18 @@ h3 img {
   font-weight: 500;
   letter-spacing: 1.4px;
   line-height: 22px;
-  padding-bottom: 2rem;
   text-align: center;
+}
+.footer-creator {
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 500;
+  letter-spacing: 1.4px;
+  line-height: 22px;
+  text-align: right;
+}
+
+.footer-creator a {
+  color: #fef4f9;
+  text-decoration: none;
 }
