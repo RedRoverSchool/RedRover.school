@@ -161,7 +161,7 @@ const i18Obj = {
     "link-reviews": "Отзывы",
     "hero-title": "Бесплатная IT-школа RedRover",
     "hero-description": "Для тех, кто хочет пробовать новое, меняться, искать себя и работу мечты!",
-    "hero-btn-join": "Присоедениться",
+    "hero-btn-join": "Присоединиться",
     "hero-terms": "Начало семестра <br /> 22 января 2024",
     "learning-process-title": "Обучение",
     "learning-process-description": "Как организован учебный процесс",
