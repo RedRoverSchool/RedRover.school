@@ -1,1 +1,1 @@
-[# redrover-site] (https://redroverschool.github.io/RedRover.school/)
+https://RedRover.school
